@@ -20,28 +20,16 @@ const PointsPage = () => {
   }
 
   const arrayFiltrado = arrayPoints.filter(item => {
-
-    item = item.region.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")
-
-    const filter = regionFilter.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")
+    item = item.region.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+    const filter = regionFilter.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
 
     if (item.includes(filter)) {
-
-      return true
-
-    
-    const point = useRequestData({}, `${BASE_URL}/pickupPoints.json`)
-  
-
-    const arrayPoints = []
-
-    for (let item of Object.values(point)) {
-      arrayPoints.push(item)
-
+      return true;
     }
 
-    return false
-  })
+    return false;
+  });
+
 
   const pickupPointsList = arrayFiltrado.map((point) => {
     return (
