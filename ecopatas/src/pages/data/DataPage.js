@@ -9,7 +9,7 @@ const DataPage = () => {
       
 
   return (
-    <>
+    <S.MainData>
       <Navbar/>
 
       <S.Header>
@@ -17,10 +17,13 @@ const DataPage = () => {
       </S.Header>
         
       <ArticleData/>
-
+    
+    <S.Footer>
       <Footer/>
+    </S.Footer>
+      
 
-    </>
+    </S.MainData>
   )
 }
 
