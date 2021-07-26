@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import Footer from '../../components/Footer'
-import Navbar from '../../components/Navbar'
+import Navbar from '../../components/Navbar/Navbar'
 import useScript from '../../hooks/useScript'
 import * as S from './styled'
 import { FaPaw } from "react-icons/fa"

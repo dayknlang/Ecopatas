@@ -35,12 +35,12 @@ const PointsPage = () => {
   })
   return (
     <div>
-      Sou o PointsPage
+     
       <div>Informe a região do Ponto de Arrecadação: </div>
       <input onChange={onChange} />
       <div>
-        {pickupPointsList.length > 0 && regionFilter !== "" ?
-          pickupPointsList : <h1>Carregando</h1>}
+        {pickupPointsList.length > 0 &&
+          pickupPointsList}
       </div>
     </div>
   )
