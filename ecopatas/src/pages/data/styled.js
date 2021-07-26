@@ -23,6 +23,11 @@ export const Header = styled.div`
         color: #F6F7EB;
     }
 `
+export const MainData = styled.div`
+    display: flex;
+    flex-direction: column;   
+`
+
 export const Main = styled.div`
     display: flex;
     flex-direction: column;
@@ -87,3 +92,8 @@ export const Text = styled.div`
     color: #394442;
 `
 
+export const Footer = styled.div`
+    position: absolute;
+    top:2700px;
+    
+`
