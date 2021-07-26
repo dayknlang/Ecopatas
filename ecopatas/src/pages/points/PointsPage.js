@@ -6,12 +6,7 @@ import { BASE_URL } from '../../constants/urls';
 const PointsPage = () => {
     
     const point = useRequestData({}, `${BASE_URL}/pickupPoints.json`)
-    
-    
-    useEffect(() => {
-      inicialStateFilter()
-      
-    }, [])
+  
 
     const arrayPoints = []
 
