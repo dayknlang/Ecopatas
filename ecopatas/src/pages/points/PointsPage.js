@@ -4,6 +4,7 @@ import { BASE_URL } from '../../constants/urls';
 
 const PointsPage = () => {
 
+
   const point = useRequestData({}, `${BASE_URL}/pickupPoints.json`)
 
   const [regionFilter, setRegionFilter] = useState("")
@@ -27,6 +28,16 @@ const PointsPage = () => {
     if (item.includes(filter)) {
 
       return true
+
+    
+    const point = useRequestData({}, `${BASE_URL}/pickupPoints.json`)
+  
+
+    const arrayPoints = []
+
+    for (let item of Object.values(point)) {
+      arrayPoints.push(item)
+
     }
 
     return false
