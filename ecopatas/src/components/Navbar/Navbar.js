@@ -3,7 +3,7 @@ import * as S from './styles';
 import Logo from '../../assets/imgs/logoecopatas.jpg';
 import Burger from './Burger';
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <>
       <S.Nav>
@@ -11,6 +11,7 @@ const Navbar = () => {
       </S.Nav>
       <Burger />
       {props.children}
+      
     </>
   )
 }

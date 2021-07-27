@@ -1,12 +1,12 @@
-import React from 'react'
-import { useHistory } from 'react-router-dom'
-import Footer from '../../components/Footer'
-import Navbar from '../../components/Navbar/Navbar'
-import useScript from '../../hooks/useScript'
-import * as S from './styled'
-import { FaPaw } from "react-icons/fa"
-import volunteerHome from '../../assets/imgs/volunteerHome.png'
-import { goToDataPage, goToDonationPage, goToVolunteerPage } from '../../routes/coordinator'
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+import Footer from '../../components/Footer';
+import Navbar from '../../components/Navbar/Navbar';
+import useScript from '../../hooks/useScript';
+import * as S from './styled';
+import { FaPaw } from "react-icons/fa";
+import volunteerHome from '../../assets/imgs/volunteerHome.png';
+import { goToDataPage, goToDonationPage, goToVolunteerPage } from '../../routes/coordinator';
 
 
 const HomePage = () => {
@@ -38,13 +38,13 @@ const HomePage = () => {
               parte do nosso time, resultados e da história
               da Ecopatas.
           </p>
-          <img src={volunteerHome}/>
-            <ul><FaPaw size = {20}/>  O que faz o voluntário? </ul>
+          <img src={volunteerHome} alt="" />
+            <ul><FaPaw size = {20}/> O que Faz o Voluntário? </ul>
             <ul><FaPaw size = {20}/> Triagem na Ecopatas </ul>
             <ul><FaPaw size = {20}/> Arrecada Tampinhas </ul>
             <ul><FaPaw size = {20}/> Triagem em Casa</ul>
-            <ul><FaPaw size = {20}/> Ajuda no transporte do material</ul>
-          <S.ButtonGreen onClick={() => goToVolunteerPage(history)}>Quero ser voluntário</S.ButtonGreen>
+            <ul><FaPaw size = {20}/> Ajuda no Transporte do Material</ul>
+          <S.ButtonGreen onClick={() => goToVolunteerPage(history)}>Quero ser Voluntário!</S.ButtonGreen>
         </S.SectionVolunteer>
 
         <S.Photos >
@@ -53,7 +53,7 @@ const HomePage = () => {
             </script>
           </section>
       
-          <S.ButtonGreenDois onClick={() => goToDataPage(history)}>Ver indicadores </S.ButtonGreenDois>
+          <S.ButtonGreenDois onClick={() => goToDataPage(history)}>Ver Indicadores </S.ButtonGreenDois>
         </S.Photos>
   
       </S.Main>
