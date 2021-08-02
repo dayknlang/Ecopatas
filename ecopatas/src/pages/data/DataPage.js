@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import ArticleData from './ArticleData';
 import Footer from '../../components/Footer'
-import Navbar from '../../components/Navbar'
 import * as S from './styled'
+import Navbar from '../../components/Navbar/Navbar';
 
 
 const DataPage = () => {
