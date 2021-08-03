@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from '../../components/Navbar/Navbar';
 
 
 
@@ -7,7 +8,7 @@ const DonationPage = () => {
 
   return (
     <div>
-        Sou o DonationPage
+        <Navbar/>
 
        
     </div>

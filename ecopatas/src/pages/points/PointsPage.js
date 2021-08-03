@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import useRequestData from '../../hooks/useRequestData';
 import { BASE_URL } from '../../constants/urls';
+import Navbar from '../../components/Navbar/Navbar';
 
 const PointsPage = () => {
   const point = useRequestData({}, `${BASE_URL}/pickupPoints.json`)
@@ -8,15 +9,17 @@ const PointsPage = () => {
   const onChange = (event) => {
     setRegionFilter(event.target.value);
   };
-  const arrayPoints = []
-  for (let item of Object.values(point)) {
-    arrayPoints.push(item)
-  }
+  const arrayPoints = Object.values(point)
+
   const arrayFiltrado = arrayPoints.filter(item => {
-    item = item.region.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")
+    const region = item.region.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")
+    const neighborhood = item.neighborhood.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")
     const filter = regionFilter.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")
-    if (item.includes(filter)) {
+    if (region.includes(filter)) {
       return true;
+    }
+    if (neighborhood.includes(filter)) {
+        return true;
     }
     return false;
   })
@@ -36,7 +39,9 @@ const PointsPage = () => {
   return (
     <div>
      
-      <div>Informe a região do Ponto de Arrecadação: </div>
+     <Navbar/>
+
+      <div>Informe a região ou bairro do Ponto de Arrecadação: </div>
       <input onChange={onChange} />
       <div>
         {pickupPointsList.length > 0 &&
